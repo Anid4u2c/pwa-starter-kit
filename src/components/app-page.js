@@ -222,10 +222,10 @@ class AppPage extends connect(store)(LitElement) {
 
       <!-- Main content -->
       <main role="main" class="main-content">
-        <my-view1 class="page" ?active="${this._page === 'view1'}"></my-view1>
+        <app-page-view1 class="page" ?active="${this._page === 'view1'}"></app-page-view1>
         <my-view2 class="page" ?active="${this._page === 'view2'}"></my-view2>
-        <my-view3 class="page" ?active="${this._page === 'view3'}"></my-view3>
-        <my-view404 class="page" ?active="${this._page === 'view404'}"></my-view404>
+        <app-page-view3 class="page" ?active="${this._page === 'view3'}"></app-page-view3>
+        <app-page-view404 class="page" ?active="${this._page === 'view404'}"></app-page-view404>
       </main>
 
       <footer>
