@@ -2,7 +2,7 @@
 [![Build status](https://api.travis-ci.org/Polymer/pwa-starter-kit.svg?branch=master)](https://travis-ci.org/Polymer/pwa-starter-kit)
 
 > ## 🛠 Status: In Development
-> [PWA Ownerless Kit](https://pwa-starter-kit.polymer-project.org/) is currently in development, meaning the PWA Ownerless Kit is working towards mirroring it's development based on the master branch. It's on the fast track to a 1.0 release, so we encourage you to use it and give us your feedback, but there are things that haven't been finalized yet and you can expect some changes.
+> [PWA Starter Kit](https://pwa-starter-kit.polymer-project.org/) is currently in development, meaning the PWA Ownerless Kit is working towards mirroring it's development based on the master branch. It's on the fast track to a 1.0 release, so we encourage you to use it and give us your feedback, but there are things that haven't been finalized yet and you can expect some changes.
 >
 > See the list of Known Issues and TODOs, below, for updates.
 
