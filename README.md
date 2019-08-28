@@ -4,8 +4,7 @@
 > ## 🛠 Status: In Development
 > [PWA Starter Kit](https://github.com/Polymer/pwa-starter-kit/) is currently in development,
 >meaning the [PWA Ownerless Kit](https://github.com/Polymer/pwa-starter-kit/) is working towards
->mirroring it's development based on the [master branch](https://github.com/Polymer/pwa-starter-kit/)
->. It's on the fast track to a 1.0 release, so we encourage you to use it and give us your feedback, but there are things that haven't been finalized yet and you can expect some changes.
+>mirroring it's development based on the [master branch](https://github.com/Polymer/pwa-starter-kit/).
 >
 >
 > See the list of Known [Issues](https://github.com/Polymer/pwa-starter-kit/issues) and [TODOs](https://github.com/Polymer/pwa-starter-kit#todos), from the source, for updates.
@@ -25,6 +24,32 @@ gives you the following features:
 - unit and integrating testing starting points
 - documentation about other advanced patterns.
 
-### 📖 Head over to the [documentation site](https://pwa-starter-kit.polymer-project.org/) for more details or check out [how to get started](https://pwa-starter-kit.polymer-project.org/setup)!
-
-![pwa-starter-kit screenshot](https://user-images.githubusercontent.com/1369170/39715580-a1be5126-51e2-11e8-8440-96b07be03a3c.png)
+### 📖Actions Required to Become Ownerless
+1. `index.html`
+    * Replaced "my-app" with "app-page", and "My App" with "PWA Ownerless Kit".
+1. `package.json`
+    * (OPTIONAL) Changed "name" to "pwa-ownerless-kit" and "repository" to "Anid4u2c/pwa-ownerless-kit".
+1. `polymer.json`
+    * Replaced "my-app" with "app-page".
+1. `push-manifest.json`
+    * Replaced "my-app" with "app-page", and "my-" with "app-page-".    
+1. `/src/actions/app.js`
+    * Replaced '../components/my-view[1|2|3].js' with '../components/app-page-view[1|2|3].js'..
+1. `/src/components/counter-element.js`
+    * Replaced "my" with "app", for './app-icons.js'.
+1. `/src/components/shop-products.js`
+    * Replaced "my" with "app", for './app-icons.js'.
+1. Renamed `/src/components/my-app.js` to `/src/components/app-page.js`
+    * Replaced "my-app" with "app-page", and "MyApp" with "AppPage".
+    * Replaced "<my-view[1|2|3]>" with "<app-page-view[1|2|3]>".
+    * Replaced "my" with "app", for './app-icons.js'.
+1. Renamed `/src/components/my-icons.js` to `/src/components/app-icons.js`
+    * Replaced "my-icons" with "app-icons", and "MyIcons" with "AppIcons".
+1. Renamed `/src/components/my-view1.js` to `/src/components/app-page-view1.js`
+    * Replaced "my-view1" with "app-page-view1", and "MyView1" with "AppPageView1".
+1. Renamed `/src/components/my-view2.js` to `/src/components/app-page-view2.js`
+    * Replaced "my-view2" with "app-page-view1", and "MyView2" with "AppPageView2".
+1. Renamed `/src/components/my-view3.js` to `/src/components/app-page-view3.js`
+    * Replaced "my-view3" with "app-page-view1", and "MyView3" with "AppPageView3".
+1. Renamed `/src/components/my-view404.js` to `/src/components/app-page-view404.js`
+    * Replaced "my-view404" with "app-page-view1", and "MyView404" with "AppPageView404".
