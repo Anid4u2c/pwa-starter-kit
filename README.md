@@ -24,7 +24,7 @@ gives you the following features:
 - unit and integrating testing starting points
 - documentation about other advanced patterns.
 
-### 📖Actions Required to Become Ownerless
+### Actions Required to Become Ownerless
 1. `index.html`
     * Replaced "my-app" with "app-page", and "My App" with "PWA Ownerless Kit".
 1. `package.json`
