@@ -53,3 +53,5 @@ gives you the following features:
     * Replaced "my-view3" with "app-page-view1", and "MyView3" with "AppPageView3".
 1. Renamed `/src/components/my-view404.js` to `/src/components/app-page-view404.js`
     * Replaced "my-view404" with "app-page-view1", and "MyView404" with "AppPageView404".
+1. (OPTIONAL) Configure "Firebase Hosting + Firebase Functions" to allow deployment of the PWA Ownerless Kit:
+    * See [this enhanced gist](https://gist.github.com/Anid4u2c/67d3374595d8a68f4d8bcf6d167dea4e) and complete the steps.
