@@ -2,12 +2,13 @@
 [![Build status](https://api.travis-ci.org/Polymer/pwa-starter-kit.svg?branch=master)](https://travis-ci.org/Polymer/pwa-starter-kit)
 
 > ## 🛠 Status: In Development
+> [PWA Ownerless Kit](https://pwa-starter-kit.polymer-project.org/) is currently in development, meaning the PWA Ownerless Kit is working towards mirroring it's development based on the master branch. It's on the fast track to a 1.0 release, so we encourage you to use it and give us your feedback, but there are things that haven't been finalized yet and you can expect some changes.
 >
-> See the list of Known [Issues](https://github.com/Polymer/pwa-starter-kit/issues) and [TODOs](https://github.com/Polymer/pwa-starter-kit#todos), from the source, for updates.
+> See the list of Known Issues and TODOs, below, for updates.
 
 # PWA Ownerless Kit
 
-This app is a based on the [PWA Starter Kit](https://pwa-starter-kit.polymer-project.org/), which is a starting point for building PWAs. Out of the box, the template
+This sample app is a starting point for building PWAs. Out of the box, the template
 gives you the following features:
 - all the PWA goodness (manifest, service worker)
 - a responsive layout
@@ -23,3 +24,9 @@ gives you the following features:
 ### 📖 Head over to the [documentation site](https://pwa-starter-kit.polymer-project.org/) for more details or check out [how to get started](https://pwa-starter-kit.polymer-project.org/setup)!
 
 ![pwa-starter-kit screenshot](https://user-images.githubusercontent.com/1369170/39715580-a1be5126-51e2-11e8-8440-96b07be03a3c.png)
+
+## TODOs
+
+- [x] Setup Safari testing on Travis.
+- [x] Deploy all templates as demos.
+- [ ] Update to latest [Material Web Components](https://github.com/material-components/material-components-web-components).
