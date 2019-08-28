@@ -14,6 +14,28 @@ const replace = require('gulp-replace');
 const del = require('del');
 
 /**
+ * Allows the build to work with Firebase functions, by building the
+ * Firebase-ready version of the PWA, moving the necessary
+ * files to the functions folder for use by PRPL Server.
+ * SEE:  https://gist.github.com/Anid4u2c/67d3374595d8a68f4d8bcf6d167dea4e
+ */
+gulp.task('firebase', () => {
+    // These are the files needed by PRPL Server, that are going to be moved to the functions folder
+    const filesToMove = [ 'build/polymer.json', 'build/**/index.html', 'build/**/push-manifest.json' ];
+    // Delete the build folder inside the functions folder
+    return del('functions/build')
+        .then(() =>
+            // Copy the files needed by PRPL Server
+            new Promise((resolve) =>
+                gulp
+                    .src(filesToMove, { base: '.' })
+                    .pipe(gulp.dest('functions'))
+                    .on('end', resolve)))
+        // Delete them from the original build
+        .then(() => del(filesToMove));
+});
+
+/**
  * Cleans the prpl-server build in the server directory.
  */
 gulp.task('prpl-server:clean', () => {

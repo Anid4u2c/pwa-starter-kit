@@ -9,6 +9,8 @@
  */
 
 module.exports = {
+  navigateFallback: '/index.html',
+  navigateFallbackWhitelist: [ /^\/[^\_]+\/?/ ],
   staticFileGlobs: [
     'manifest.json',
     'src/**/*',
