@@ -40,16 +40,16 @@ gives you the following features:
         * `SharedStyles` &#8594; `StylesShared`
 1. Search and replace instances of text, including 'my-app', and 'my-view' (which catches all 4 views).
     * `index.html` 
-        * "my-app" with "app-page"
-        * "My App" with "PWA Ownerless Kit"
+        * "my-app" &#8594; "app-page"
+        * "My App" &#8594; "PWA Ownerless Kit"
     * `manifest.json` 
-        * "My App" with "PWA Ownerless Kit"
+        * "My App" &#8594; "PWA Ownerless Kit"
     * `polymer.json` 
-        * "my-app" with "app-page"
+        * "my-app" &#8594; "app-page"
     * `push-manifest.json` 
-        *  "my-app" with "app-page"
-        * "my-view" with "app-page-view"
+        *  "my-app" &#8594; "app-page"
+        * "my-view" &#8594; "app-page-view"
     * `src/actions/*` 
-        * "my-view" with "app-page-view"
+        * "my-view" &#8594; "app-page-view"
 1. (OPTIONAL) Configure "Firebase Hosting + Firebase Functions" to allow deployment of the PWA Ownerless Kit:
     * See [this enhanced gist](https://gist.github.com/Anid4u2c/67d3374595d8a68f4d8bcf6d167dea4e) and complete the steps.
