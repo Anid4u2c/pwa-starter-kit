@@ -12,12 +12,12 @@ import { html } from 'lit-element';
 import { PageViewElement } from './page-view-element.js';
 
 // These are the shared styles needed by this element.
-import { SharedStyles } from './shared-styles.js';
+import { StylesShared } from './styles-shared.js';
 
-class MyView1 extends PageViewElement {
+class AppPageView1 extends PageViewElement {
   static get styles() {
     return [
-      SharedStyles
+      StylesShared
     ];
   }
 
@@ -39,4 +39,4 @@ class MyView1 extends PageViewElement {
   }
 }
 
-window.customElements.define('my-view1', MyView1);
+window.customElements.define('app-page-view1', AppPageView1);

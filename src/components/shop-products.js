@@ -21,10 +21,10 @@ import './shop-item.js';
 import { getAllProducts, addToCart } from '../actions/shop.js';
 
 // These are the elements needed by this element.
-import { addToCartIcon } from './my-icons.js';
+import { addToCartIcon } from './app-icons.js';
 
 // These are the shared styles needed by this element.
-import { ButtonSharedStyles } from './button-shared-styles.js';
+import { StylesSharedButton } from './styles-shared-button.js';
 
 class ShopProducts extends connect(store)(LitElement) {
   static get properties() {
@@ -35,7 +35,7 @@ class ShopProducts extends connect(store)(LitElement) {
 
   static get styles() {
     return [
-      ButtonSharedStyles,
+      StylesSharedButton,
       css`
         :host {
           display: block;

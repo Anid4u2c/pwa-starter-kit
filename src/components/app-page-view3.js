@@ -29,11 +29,11 @@ import './shop-products.js';
 import './shop-cart.js';
 
 // These are the shared styles needed by this element.
-import { SharedStyles } from './shared-styles.js';
-import { ButtonSharedStyles } from './button-shared-styles.js';
-import { addToCartIcon } from './my-icons.js';
+import { StylesShared } from './styles-shared.js';
+import { StylesSharedButton } from './styles-shared-button.js';
+import { addToCartIcon } from './app-icons.js';
 
-class MyView3 extends connect(store)(PageViewElement) {
+class AppPageView3 extends connect(store)(PageViewElement) {
   static get properties() {
     return {
       // This is the data from the store.
@@ -44,8 +44,8 @@ class MyView3 extends connect(store)(PageViewElement) {
 
   static get styles() {
     return [
-      SharedStyles,
-      ButtonSharedStyles,
+      StylesShared,
+      StylesSharedButton,
       css`
         button {
           border: 2px solid var(--app-dark-text-color);
@@ -119,4 +119,4 @@ class MyView3 extends connect(store)(PageViewElement) {
   }
 }
 
-window.customElements.define('my-view3', MyView3);
+window.customElements.define('app-page-view3', AppPageView3);

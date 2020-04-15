@@ -31,10 +31,10 @@ import '@polymer/app-layout/app-drawer/app-drawer.js';
 import '@polymer/app-layout/app-header/app-header.js';
 import '@polymer/app-layout/app-scroll-effects/effects/waterfall.js';
 import '@polymer/app-layout/app-toolbar/app-toolbar.js';
-import { menuIcon } from './my-icons.js';
+import { menuIcon } from './app-icons.js';
 import './snack-bar.js';
 
-class MyApp extends connect(store)(LitElement) {
+class AppPage extends connect(store)(LitElement) {
   static get properties() {
     return {
       appTitle: { type: String },
@@ -222,10 +222,10 @@ class MyApp extends connect(store)(LitElement) {
 
       <!-- Main content -->
       <main role="main" class="main-content">
-        <my-view1 class="page" ?active="${this._page === 'view1'}"></my-view1>
-        <my-view2 class="page" ?active="${this._page === 'view2'}"></my-view2>
-        <my-view3 class="page" ?active="${this._page === 'view3'}"></my-view3>
-        <my-view404 class="page" ?active="${this._page === 'view404'}"></my-view404>
+        <app-page-view1 class="page" ?active="${this._page === 'view1'}"></app-page-view1>
+        <app-page-view2 class="page" ?active="${this._page === 'view2'}"></app-page-view2>
+        <app-page-view3 class="page" ?active="${this._page === 'view3'}"></app-page-view3>
+        <app-page-view404 class="page" ?active="${this._page === 'view404'}"></app-page-view404>
       </main>
 
       <footer>
@@ -279,4 +279,4 @@ class MyApp extends connect(store)(LitElement) {
   }
 }
 
-window.customElements.define('my-app', MyApp);
+window.customElements.define('app-page', AppPage);
