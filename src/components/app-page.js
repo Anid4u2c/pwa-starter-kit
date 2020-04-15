@@ -45,10 +45,11 @@ class AppPage extends connect(store)(LitElement) {
     };
   }
 
-  static get styles() {
-    return [
-      css`
-        :host {
+  render() {
+    // Anything that's related to rendering should be done in here.
+    return html`
+      <style>
+            :host {
           display: block;
 
           --app-drawer-width: 256px;
@@ -187,13 +188,7 @@ class AppPage extends connect(store)(LitElement) {
             padding-right: 0px;
           }
         }
-      `
-    ];
-  }
-
-  render() {
-    // Anything that's related to rendering should be done in here.
-    return html`
+      </style>
       <!-- Header -->
       <app-header condenses reveals effects="waterfall">
         <app-toolbar class="toolbar-top">
