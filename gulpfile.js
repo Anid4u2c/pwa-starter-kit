@@ -110,7 +110,7 @@ regexTasks.forEach(function(taskName) {
       for(let pattern in subtasks)
       {
         let replacement = subtasks[pattern];
-        if(pattern.match(" ").length !== null)
+        if(pattern.match(" ") !== null)
         {
           pattern = new RegExp(pattern, 'gi');
         }
