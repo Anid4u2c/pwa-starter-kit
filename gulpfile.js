@@ -110,7 +110,7 @@ regexTasks.forEach(function(taskName) {
       for(let pattern in subtasks)
       {
         let replacement = subtasks[pattern];
-        if(pattern.match(" "))
+        if(pattern.match(" ").length > 0)
         {
           pattern = new RegExp(pattern, 'gi');
         }
@@ -141,11 +141,11 @@ gulp.task('ownerless:init', gulp.series(
 ));
 
 function normalizeHeader(header) {
-  var key = "";
-  var upperCase = false;
-  for (var i = 0; i < header.length; ++i)
+  let key = "";
+  let upperCase = false;
+  for (let i = 0; i < header.length; ++i)
   {
-    var letter = header[i];
+    let letter = header[i];
     if ((letter === " " || letter === "-") && key.length > 0) {
       upperCase = true;
       continue;
