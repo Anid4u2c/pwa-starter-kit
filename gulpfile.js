@@ -75,25 +75,29 @@ const renameFiles = Object.keys(renameFileObjs);
 const {spawn} = require('child_process');
 renameFiles.forEach(function (taskName) {
     gulp.task("git-mv:" + taskName, async function () {
-	   let filenameNew = renameFileObjs[taskName];
 	   let folderName = './src/components/';
+	   let filenameNew = 'components/' + renameFileObjs[taskName];
 	   let filenameOld = folderName + taskName;
 
-	   /*
+	   // rename to a fixed value
+	   gulp.src(filenameOld, { allowEmpty: true })
+		  .pipe(rename(filenameNew))
+		  .pipe(gulp.dest("./src")); // ./dist/main/text/ciao/goodbye.md
+	   /*/!*
 	   * SEE:  https://www.npmjs.com/package/gulp-exec
 	   * COMMAND:  git mv old_filename new_filename
-	   */
-	   const gitMv = spawn("git", ["mv", filenameOld, folderName + filenameNew]);
-	   /*
+	   *!/
+	   const gitMv = spawn("git", ["mv", filenameOld, filenameNew]);
+	   /!*
 	   gitMv.stdout.on('data', (data) => { console.log(`stdout: ${data}`); });
 	   gitMv.stderr.on('data', (data) => { console.error(`stderr: ${data}`); });
 	   gitMv.on('close', (code) => { console.log(`child process exited with code ${code}`); });
-	   */
+	   *!/
 	   await gitMv.on('close',
 		   (code) => {
-			  console.log(`child process exited with code ${code}`);
-			  console.log("\tRENAMING:  ", taskName, " TO NEW NAME:  ", filenameNew);
-		   });
+				console.log(`child process exited with code ${code}`);
+			  	console.log("\tRENAMING:  ", taskName, " (OLD PATH:  ", filenameOld, ") TO NEW NAME:  ", filenameNew);
+		   });*/
     });
 });
 
